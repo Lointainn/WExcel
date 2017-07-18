@@ -217,6 +217,21 @@ typedef void(^Block_scrollViewDidChangeAdjustedContentInset_WithSelf)(UIScrollVi
         [self swizzlingWillMoveToWindow:newWindow];
         [self setDelegates];
     }
+    if (newWindow == nil && [self isKindOfClass:[UITableView class]]) {
+//        Block_numberOfRowsInSection blockk = (Block_numberOfRowsInSection)[self performSelector:NSSelectorFromString(@"numberOfRowsInSectionBlock")];
+//        blockk = nil;
+//        [self.settingMethodsForAvoidingSelfCircleList enumerateObjectsUsingBlock:^(NSString * _Nonnull settingMethod, NSUInteger idx, BOOL * _Nonnull stop) {
+//
+//            if ([[self class] instancesRespondToSelector:NSSelectorFromString(settingMethod)]) {
+//                [self performSelector:NSSelectorFromString(settingMethod) withObject:nil];
+//            }
+//        }];
+        NSLog(@"window %@ %@",newWindow,self);
+    }
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+//    NSLog(@"newSuperview %@  %@",newSuperview,self);
 }
 
 - (void)swizzlingLayoutSubviews {
@@ -300,6 +315,7 @@ typedef void(^Block_scrollViewDidChangeAdjustedContentInset_WithSelf)(UIScrollVi
     [selString deleteCharactersInRange:NSMakeRange(0, 6)];
     [selString insertString:@"Block" atIndex:selString.length - 1];
     selString =  [[self class]getSetNameFromPropertyName:selString.copy].mutableCopy;
+    [self.settingMethodsForAvoidingSelfCircleList addObject:selString.copy];
     //执行不含self变量的block的set方法
     if ([[self class] instancesRespondToSelector:NSSelectorFromString(selString)]) {
         [self performSelector:NSSelectorFromString(selString.copy) withObject:block];
@@ -875,5 +891,18 @@ typedef void(^Block_scrollViewDidChangeAdjustedContentInset_WithSelf)(UIScrollVi
         [self setForwardingManager:_fdm];
     }
     return _fdm;
+}
+
+//避免循环引用,在外界每实现一个block方法,在此记录其对应的set方法,以在最后置空
+- (void)setSettingMethodsForAvoidingSelfCircleList:(NSMutableArray *)settingMethodsForAvoidingSelfCircleList {
+    objc_setAssociatedObject(self, @selector(settingMethodsForAvoidingSelfCircleList), settingMethodsForAvoidingSelfCircleList, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (NSMutableArray *)settingMethodsForAvoidingSelfCircleList {
+    NSMutableArray *_settingMethodsForAvoidingSelfCircleList = objc_getAssociatedObject(self, _cmd);
+    if (!_settingMethodsForAvoidingSelfCircleList) {
+        _settingMethodsForAvoidingSelfCircleList = [NSMutableArray array];
+        [self setSettingMethodsForAvoidingSelfCircleList:_settingMethodsForAvoidingSelfCircleList];
+    }
+    return _settingMethodsForAvoidingSelfCircleList;
 }
 @end

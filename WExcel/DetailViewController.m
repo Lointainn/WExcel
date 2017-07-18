@@ -78,7 +78,7 @@
         return cell;
     }];
     [_leftTableView block_numberOfRowsInSection:^NSInteger(UITableView *tableView, NSInteger section) {
-        return wself.leftCount;
+        return self.leftCount;
     }];
     [_leftTableView block_heightForRowAtIndexPath:^CGFloat(UITableView *tableView, NSIndexPath *indexPath) {
         return ButtonDefaultHeight;
@@ -86,26 +86,25 @@
     [_leftTableView block_didSelectRowAtIndexPath:^(UITableView *tableView, NSIndexPath *indexPath) {
         NSLog(@"%ld",indexPath.row);
         
-        wself.leftSelectedIndexPath = indexPath;
-        [wself.upTableView deselectRowAtIndexPath:wself.upSelectedIndexPath animated:0];
-        [wself.collectionView deselectItemAtIndexPath:wself.collectionSelectedIndexPath animated:0];
-        wself.headerButton.selected = 0;
+        self.leftSelectedIndexPath = indexPath;
+        [self.upTableView deselectRowAtIndexPath:self.upSelectedIndexPath animated:0];
+        [self.collectionView deselectItemAtIndexPath:self.collectionSelectedIndexPath animated:0];
+        self.headerButton.selected = 0;
 
         LeftTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-
-        [ButtonMenu showMenuByView:cell titleList:wself.leftTitleList selectHandler:^(NSInteger index) {
-            NSLog(@"点击Left %@",wself.leftTitleList[index]);
+        [ButtonMenu showMenuByView:cell titleList:self.leftTitleList selectHandler:^(NSInteger index) {
+            NSLog(@"点击Left %@",self.leftTitleList[index]);
         }];
-//        if (indexPath.row  + 1 == wself.leftCount) {
-//            wself.leftCount ++;
+//        if (indexPath.row  + 1 == self.leftCount) {
+//            self.leftCount ++;
 //        }
     }];
     [_leftTableView block_scrollViewDidScroll:^(UIScrollView *scrollView) {
-        if (scrollView == wself.leftTableView) {
-            wself.collectionView.contentOffset = CGPointMake(wself.collectionView.contentOffset.x, wself.leftTableView.contentOffset.y);
+        if (scrollView == self.leftTableView) {
+            self.collectionView.contentOffset = CGPointMake(self.collectionView.contentOffset.x, self.leftTableView.contentOffset.y);
 //            if (scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.mj_h - ButtonDefaultHeight) {
-//                wself.leftCount += 10;
-//                [wself.leftTableView reloadData];
+//                self.leftCount += 10;
+//                [self.leftTableView reloadData];
 //            }
             [ButtonMenu hideMenu];
 
