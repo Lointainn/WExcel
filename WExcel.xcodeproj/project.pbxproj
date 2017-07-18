@@ -35,9 +35,9 @@
 		5DAE3ABD1F1D160B00A57C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAE3ABF1F1D160B00A57C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DAE3AC01F1D160B00A57C60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		942FD1E31F1DC0FE00AEB2D1 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = "../../Desktop/未命名文件夹/Header.h"; sourceTree = "<group>"; };
-		942FD1E41F1DC10700AEB2D1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = "../../Desktop/未命名文件夹/DetailViewController.h"; sourceTree = "<group>"; };
-		942FD1E51F1DC10700AEB2D1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = "../../Desktop/未命名文件夹/DetailViewController.m"; sourceTree = "<group>"; };
+		942FD1E31F1DC0FE00AEB2D1 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = "../WExcel/Header.h"; sourceTree = "<group>"; };
+		942FD1E41F1DC10700AEB2D1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = "../WExcel/DetailViewController.h"; sourceTree = "<group>"; };
+		942FD1E51F1DC10700AEB2D1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = "../WExcel/DetailViewController.m"; sourceTree = "<group>"; };
 		942FD1E81F1DC11400AEB2D1 /* ButtonMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonMenu.h; sourceTree = "<group>"; };
 		942FD1E91F1DC11400AEB2D1 /* ButtonMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonMenu.m; sourceTree = "<group>"; };
 		942FD1EA1F1DC11500AEB2D1 /* MainCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewFlowLayout.h; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				942FD1ED1F1DC11500AEB2D1 /* UpTableViewCell.m */,
 			);
 			name = Views;
-			path = "../../Desktop/未命名文件夹/Views";
+			path = "../WExcel/Views";
 			sourceTree = "<group>";
 		};
 		942FD1F11F1DC11900AEB2D1 /* Category */ = {
@@ -133,7 +133,7 @@
 				942FD1FB1F1DC11900AEB2D1 /* UIView+MJExtension.m */,
 			);
 			name = Category;
-			path = "../../Desktop/未命名文件夹/Category";
+			path = "../WExcel/Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
