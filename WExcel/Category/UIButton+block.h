@@ -12,8 +12,6 @@ typedef void(^ActionBlock)(UIButton*button);
 
 @interface UIButton (block)
 
-@property (nonatomic, copy) ActionBlock actionBlock;
-
 - (void)addBlockActionForControlEvents:(UIControlEvents)controlEvents block:(ActionBlock)block;
 
 @end

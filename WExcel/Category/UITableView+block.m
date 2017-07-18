@@ -8,7 +8,6 @@
 
 #import "UITableView+block.h"
 #import <objc/runtime.h>
-#import "Header.h"
 
 @interface TableForwarding : NSObject
 @end

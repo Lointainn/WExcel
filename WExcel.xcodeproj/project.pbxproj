@@ -22,6 +22,8 @@
 		942FD1FE1F1DC11900AEB2D1 /* UIImage+ColorToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 942FD1F71F1DC11900AEB2D1 /* UIImage+ColorToImage.m */; };
 		942FD1FF1F1DC11900AEB2D1 /* UITableView+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 942FD1F91F1DC11900AEB2D1 /* UITableView+block.m */; };
 		942FD2001F1DC11900AEB2D1 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 942FD1FB1F1DC11900AEB2D1 /* UIView+MJExtension.m */; };
+		942FD2031F1DDBED00AEB2D1 /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942FD2021F1DDBED00AEB2D1 /* LeftTableViewCell.m */; };
+		942FD2061F1E027A00AEB2D1 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942FD2051F1E027A00AEB2D1 /* CollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,10 @@
 		942FD1F91F1DC11900AEB2D1 /* UITableView+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+block.m"; sourceTree = "<group>"; };
 		942FD1FA1F1DC11900AEB2D1 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		942FD1FB1F1DC11900AEB2D1 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		942FD2011F1DDBED00AEB2D1 /* LeftTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
+		942FD2021F1DDBED00AEB2D1 /* LeftTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
+		942FD2041F1E027A00AEB2D1 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		942FD2051F1E027A00AEB2D1 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,10 @@
 				942FD1E91F1DC11400AEB2D1 /* ButtonMenu.m */,
 				942FD1EC1F1DC11500AEB2D1 /* UpTableViewCell.h */,
 				942FD1ED1F1DC11500AEB2D1 /* UpTableViewCell.m */,
+				942FD2011F1DDBED00AEB2D1 /* LeftTableViewCell.h */,
+				942FD2021F1DDBED00AEB2D1 /* LeftTableViewCell.m */,
+				942FD2041F1E027A00AEB2D1 /* CollectionViewCell.h */,
+				942FD2051F1E027A00AEB2D1 /* CollectionViewCell.m */,
 				942FD1EA1F1DC11500AEB2D1 /* MainCollectionViewFlowLayout.h */,
 				942FD1EB1F1DC11500AEB2D1 /* MainCollectionViewFlowLayout.m */,
 			);
@@ -216,7 +226,9 @@
 				942FD2001F1DC11900AEB2D1 /* UIView+MJExtension.m in Sources */,
 				942FD1FD1F1DC11900AEB2D1 /* UICollectionView+block.m in Sources */,
 				942FD1EE1F1DC11500AEB2D1 /* ButtonMenu.m in Sources */,
+				942FD2031F1DDBED00AEB2D1 /* LeftTableViewCell.m in Sources */,
 				942FD1FF1F1DC11900AEB2D1 /* UITableView+block.m in Sources */,
+				942FD2061F1E027A00AEB2D1 /* CollectionViewCell.m in Sources */,
 				942FD1EF1F1DC11500AEB2D1 /* MainCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

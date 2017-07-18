@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^didSelectedBlock)(NSInteger index);
+
 @interface ButtonMenu : UIView
+
+@property (nonatomic, copy, readonly) NSArray *titleList;
 
 + (ButtonMenu*)OnlyMenu;
 
-+ (void)showMenuByView:(UIView*)touchedView;
++ (void)showMenuByView:(UIView *)touchedView titleList:(NSArray *)titleList selectHandler:(didSelectedBlock)handler;
+
++ (void)hideMenu;
 @end

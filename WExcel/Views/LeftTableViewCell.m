@@ -1,21 +1,20 @@
 //
-//  UpTableViewCell.m
-//  MyExcel
+//  LeftTableViewCell.m
+//  WExcel
 //
-//  Created by Wu on 2017/7/11.
+//  Created by Wu on 2017/7/18.
 //  Copyright © 2017年 Tusky. All rights reserved.
 //
 
-#import "UpTableViewCell.h"
+#import "LeftTableViewCell.h"
 
-@implementation UpTableViewCell
+@implementation LeftTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.contentView.transform = CGAffineTransformMakeRotation(M_PI_2);
         self.backgroundColor = color_titleBackground;
-
+        
         UIView *selecBgView = [UIView new];
         selecBgView.backgroundColor = color_titleBackgroundSelected;
         self.selectedBackgroundView = selecBgView;

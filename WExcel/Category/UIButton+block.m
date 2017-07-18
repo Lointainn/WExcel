@@ -8,6 +8,10 @@
 
 #import "UIButton+block.h"
 #import <objc/runtime.h>
+@interface UIButton ()
+@property (nonatomic, copy) ActionBlock actionBlock;
+@end
+
 @implementation UIButton (block)
 - (void)addBlockActionForControlEvents:(UIControlEvents)controlEvents block:(ActionBlock)block {
     self.actionBlock = block;
