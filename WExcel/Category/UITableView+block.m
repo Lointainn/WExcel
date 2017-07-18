@@ -238,6 +238,11 @@ typedef void(^Block_scrollViewDidChangeAdjustedContentInset_WithSelf)(UIScrollVi
     if (@available(iOS 10.0, *)) {
         self.prefetchDataSource = self.prefetchDataSource ?: self;
     }
+    
+    if (@available(iOS 11.0, *)) {
+        self.dragDelegate = self.dragDelegate ?: self;
+        self.dropDelegate = self.dropDelegate ?: self;
+    }
 }
 
 #pragma clang diagnostic push
